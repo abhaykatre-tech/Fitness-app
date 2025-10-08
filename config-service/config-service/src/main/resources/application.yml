@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: config-service
+  profiles:
+    active: native  #this tells that see config files in native files
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/config
+
+server:
+  port: 8888
+
+
+
