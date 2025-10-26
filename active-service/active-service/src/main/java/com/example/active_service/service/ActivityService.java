@@ -10,6 +10,8 @@ import org.springframework.boot.autoconfigure.kafka.KafkaAutoConfiguration;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 @RequiredArgsConstructor
 public class ActivityService {
@@ -61,4 +63,7 @@ public class ActivityService {
     }
 
 
+    public List<ActivityResponse> findActivity(String userId) {
+        return activityRepository.findByUserId(userId);
+    }
 }
