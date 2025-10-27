@@ -166,7 +166,7 @@ services:
   # ---------------- FRONTEND ----------------
   frontend:
     build:
-      context: ./fitness-app
+      context: ./frontend
       dockerfile: Dockerfile
     container_name: frontend
     ports:
